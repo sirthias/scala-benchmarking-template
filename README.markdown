@@ -23,11 +23,14 @@ that takes care of the details and let's you focus on the code relevant to your 
 
         $ sbt
 
-4. Run the existing benchmark:
+4. Get dependencies:
+        > update
+
+5. Run the existing benchmark:
 
         > run
 
-5. Start hacking on `src/main/scala/org/example/Benchmark.scala`
+6. Start hacking on `src/main/scala/org/example/Benchmark.scala`
 
   
 As a simple example the project already contains a small benchmark testing the performance of `foreach`ing over a
