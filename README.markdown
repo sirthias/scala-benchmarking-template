@@ -24,6 +24,7 @@ that takes care of the details and let's you focus on the code relevant to your 
         $ sbt
 
 4. Get dependencies:
+
         > update
 
 5. Run the existing benchmark:
