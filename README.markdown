@@ -44,6 +44,7 @@ In order to run your own benchmark code simply replace the respectively marked c
 #### Using this as a plugin
 
 Right now, plugin functionality is in the works.  Put the following in <project dir>/project/plugins/project/Build.scala:
+        
         import sbt._
         import Keys._
         
