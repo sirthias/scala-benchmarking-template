@@ -40,3 +40,22 @@ In order to run your own benchmark code simply replace the respectively marked c
 
   [1]: http://code.google.com/p/caliper/
   [2]: http://wikis.sun.com/display/HotSpotInternals/MicroBenchmarks
+
+#### Using this as a plugin
+
+Right now, plugin functionality is in the works.  Put the following in <project dir>/project/plugins/project/Build.scala:
+        import sbt._
+        import Keys._
+        
+        object MyPlugin extends Build {
+
+          lazy val root = Project("root", file(".")) dependsOn(
+            uri("git://github.com/ngerhart/scala-benchmarking-template")) settings(
+            libraryDependencies ++= Seq(
+              "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "2.0",
+              "com.google.code.caliper" % "caliper" % "1.0-SNAPSHOT",
+              "com.google.code.gson" % "gson" % "1.7.1"),
+            resolvers += "sonatypeSnapshots" at "http://oss.sonatype.org/content/repositories/snapshots"
+          )
+        
+        }

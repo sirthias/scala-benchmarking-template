@@ -27,3 +27,6 @@ fork in run := true
 
 // keep everything in lib_managed
 retrieveManaged := true
+
+// make this an sbt plugin
+sbtPlugin := true
