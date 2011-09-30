@@ -29,7 +29,7 @@ that takes care of the details and let's you focus on the code relevant to your 
 
 5. Compile the template code:
 
-	> compile
+        > compile
 
 6. Run the existing benchmark:
 
@@ -49,6 +49,6 @@ In order to run your own benchmark code simply replace the respectively marked c
 
 This template works in sbt 0.10.1 (default) as well as sbt 0.7.x.  To use with 0.7.x, rename the project folder to project-0.10.x and rename the project-0.7.x folder to project after step 2, above:
 
-	$ mv project project-0.10.x
-	$ mv project-0.7.x project
+        $ mv project project-0.10.x
+        $ mv project-0.7.x project
 
