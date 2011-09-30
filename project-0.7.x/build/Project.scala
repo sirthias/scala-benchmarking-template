@@ -12,7 +12,9 @@ class Project(info: ProjectInfo) extends DefaultProject(info) {
   val SonatypeSnapshotRepo =
     MavenRepository("Sonatype OSS Repo",
                     "http://oss.sonatype.org/content/repositories/snapshots")
+
   val caliper = "com.google.code.caliper" % "caliper" % "1.0-SNAPSHOT"
+  val gson = "com.google.code.gson" % "gson" % "1.7.1"
 
   override def fork =
     forkRun("-cp" :: (runClasspath +++ buildLibraryJar).absString :: Nil)

@@ -27,11 +27,15 @@ that takes care of the details and let's you focus on the code relevant to your 
 
         > update
 
-5. Run the existing benchmark:
+5. Compile the template code:
+
+	> compile
+
+6. Run the existing benchmark:
 
         > run
 
-6. Start hacking on `src/main/scala/org/example/Benchmark.scala`
+7. Start hacking on `src/main/scala/org/example/Benchmark.scala`
 
   
 As a simple example the project already contains a small benchmark testing the performance of `foreach`ing over a
@@ -41,22 +45,10 @@ In order to run your own benchmark code simply replace the respectively marked c
   [1]: http://code.google.com/p/caliper/
   [2]: http://wikis.sun.com/display/HotSpotInternals/MicroBenchmarks
 
-#### Using this as a plugin
+#### Note
 
-Right now, plugin functionality is in the works.  Put the following in <project dir>/project/plugins/project/Build.scala:
-        
-        import sbt._
-        import Keys._
-        
-        object MyPlugin extends Build {
+This template works in sbt 0.10.1 (default) as well as sbt 0.7.x.  To use with 0.7.x, rename the project folder to project-0.10.x and rename the project-0.7.x folder to project after step 2, above:
 
-          lazy val root = Project("root", file(".")) dependsOn(
-            uri("git://github.com/ngerhart/scala-benchmarking-template")) settings(
-            libraryDependencies ++= Seq(
-              "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "2.0",
-              "com.google.code.caliper" % "caliper" % "1.0-SNAPSHOT",
-              "com.google.code.gson" % "gson" % "1.7.1"),
-            resolvers += "sonatypeSnapshots" at "http://oss.sonatype.org/content/repositories/snapshots"
-          )
-        
-        }
+	$ mv project project-0.10.x
+	$ mv project-0.7.x project
+
