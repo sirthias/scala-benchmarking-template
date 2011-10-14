@@ -13,13 +13,13 @@ that takes care of the details and let's you focus on the code relevant to your 
 
 1. Git-clone this repository:
 
-        $ git clone git://github.com/sirthias/scala-benchmarking-template.git my-benchmark
+        $ git clone git://github.com/ngerhart/scala-benchmarking-template.git my-benchmark
 
 2. Change directory into your clone:
 
         $ cd my-benchmark
 
-3. Launch [SBT](http://code.google.com/p/simple-build-tool):
+3. Launch [SBT](https://github.com/harrah/xsbt):
 
         $ sbt
 
@@ -47,7 +47,8 @@ In order to run your own benchmark code simply replace the respectively marked c
 
 #### Note
 
-This template works in sbt 0.11.0 (default) as well as sbt 0.7.x.  To use with 0.7.x, rename the project folder to project-0.11.x and rename the project-0.7.x folder to project after step 2, above:
+This template works in sbt 0.11.0 (default) as well as sbt 0.7.x.  To use with 0.7.x, rename the project folder to
+project-0.11.x and rename the project-0.7.x folder to project after step 2, above:
 
         $ mv project project-0.11.x
         $ mv project-0.7.x project
