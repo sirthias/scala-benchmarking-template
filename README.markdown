@@ -13,13 +13,13 @@ that takes care of the details and let's you focus on the code relevant to your 
 
 1. Git-clone this repository:
 
-        $ git clone git://github.com/sirthias/scala-benchmarking-template.git my-benchmark
+        $ git clone git://github.com/ngerhart/scala-benchmarking-template.git my-benchmark
 
 2. Change directory into your clone:
 
         $ cd my-benchmark
 
-3. Launch [SBT](http://code.google.com/p/simple-build-tool):
+3. Launch [SBT](https://github.com/harrah/xsbt):
 
         $ sbt
 
@@ -27,11 +27,15 @@ that takes care of the details and let's you focus on the code relevant to your 
 
         > update
 
-5. Run the existing benchmark:
+5. Compile the template code:
+
+        > compile
+
+6. Run the existing benchmark:
 
         > run
 
-6. Start hacking on `src/main/scala/org/example/Benchmark.scala`
+7. Start hacking on `src/main/scala/org/example/Benchmark.scala`
 
   
 As a simple example the project already contains a small benchmark testing the performance of `foreach`ing over a
@@ -40,3 +44,12 @@ In order to run your own benchmark code simply replace the respectively marked c
 
   [1]: http://code.google.com/p/caliper/
   [2]: http://wikis.sun.com/display/HotSpotInternals/MicroBenchmarks
+
+#### Note
+
+This template works in sbt 0.11.0 (default) as well as sbt 0.7.x.  To use with 0.7.x, rename the project folder to
+project-0.11.x and rename the project-0.7.x folder to project after step 2, above:
+
+        $ mv project project-0.11.x
+        $ mv project-0.7.x project
+
