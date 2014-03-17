@@ -24,6 +24,6 @@ object Build extends Build {
     // we need to add the runtime classpath as a "-cp" argument to the `javaOptions in run`, otherwise caliper
     // will not see the right classpath and die with a ConfigurationException
     javaOptions in run ++= Seq("-cp",
-      Build.data((fullClasspath in Runtime).value).mkString(":"))
+      Attributed.data((fullClasspath in Runtime).value).mkString(":"))
   )
 }
