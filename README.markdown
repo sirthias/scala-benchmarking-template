@@ -27,12 +27,12 @@ that takes care of the details and let's you focus on the code relevant to your 
 
         > run
 
-5. Start hacking on `src/main/scala/org/example/Benchmark.scala`
+5. Start hacking on `src/main/scala/org/example/MyBenchmark.scala`
 
   
 As a simple example the project already contains a small benchmark testing the performance of `foreach`ing over a
 Scala `Array` against a simple `while` loop as well as a specialized, custom `for` loop replacement implementation.
 In order to run your own benchmark code simply replace the respectively marked code snippets with your own.
 
-  [1]: http://code.google.com/p/caliper/
+  [1]: https://github.com/google/caliper
   [2]: http://wikis.sun.com/display/HotSpotInternals/MicroBenchmarks

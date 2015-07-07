@@ -1,9 +1,7 @@
 package org.example
 
-import com.google.caliper.SimpleBenchmark
+object Helpers {
 
-trait SimpleScalaBenchmark extends SimpleBenchmark {
-  
   // helper method to keep the actual benchmarking methods a bit cleaner
   // your code snippet should always return a value that cannot be "optimized away"
   def repeat[@specialized A](reps: Int)(snippet: => A) = {
