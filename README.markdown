@@ -1,6 +1,7 @@
 ### :warning: :warning: :warning: Warning: Outdated, not recommended benchmarking method :warning: :warning: :warning: ###
 
 This template pretty old and originated in times before the official [OpenJDK (Micro)benchmark Harness (JMH)](http://openjdk.java.net/projects/code-tools/jmh/) was made available.
+
 Nowadays it is recommended to use the sbt plugin [sbt-jmh](https://github.com/ktoso/sbt-jmh) for benchmarking Scala code.
 
 To understand why a proper benchmark harness is so important you may want to read the excellent articles on the matter by 
